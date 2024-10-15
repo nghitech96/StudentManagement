@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <nav
+            class="nav justify-content-center ">
+            <a class="nav-link active" href="#" aria-current="page">User Management</a>
+            <a class="nav-link" href="#">Subject</a>
+            <a class="nav-link disabled" href="#">Disabled link</a>
+        </nav>
+        
+    </div>
+
+    <div class="container">
+        
+        <section class="container">
+            <table class="table_content">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                </tr>
+                <c:forEach var="users" items="${users}">
+                    <tr>
+                        <td>${users.getID()}</td>
+                        <td>${users.getName()}</td>
+                        <td>${users.getEmail()}</td>
+                        <td>${users.getPassword()}</td>
+                    </tr>
+                </c:forEach>
+            </table>
+        </section>
+       
+    </div>
+</body>
+</html>

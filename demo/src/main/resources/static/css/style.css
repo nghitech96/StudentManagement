@@ -1,0 +1,96 @@
+.root {
+    flex: auto
+}
+
+.container {
+    flex: auto;
+    margin-left: 100;
+    margin-right: 50;
+    margin-top: auto;
+    margin-bottom: 200;
+    padding: 50;
+
+}
+
+body{
+    background: url(https://img.pikbest.com/backgrounds/20180824/beautiful-horizon-with-clear-sky-sunrise-sunset-background_2777072.jpg!w700wp)no-repeat;
+    padding: 0;
+    margin: 0;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.header-main {
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 33%;	
+    border: 1px solid #ccc;
+    padding: 20px;
+    opacity: 85%;
+    margin: auto;
+    border-radius: 5%;
+}
+
+.header-img .img{
+    width: 150px;
+    height: 150px;
+    margin: auto;
+}
+
+.form-check {
+	margin-bottom: 4px;
+	font-size: 1.2em;
+	line-height: 27px;
+	cursor: pointer;
+}
+
+.button{
+    margin: auto;
+    display: inline;
+    justify-content: center;
+}
+
+title {
+    justify-content: center;
+    margin: auto;
+}
+
+.footer {
+    padding: 120;
+    text-align: center;
+    margin-bottom: 0%;
+}
+
+.container .table {
+    order: 2px solid black;
+}
+
+.table-content {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table_content th, .table_content td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-content {
+    display: flex;
+}
+
+.title {
+    color: white;
+    font-size: 40px;
+}

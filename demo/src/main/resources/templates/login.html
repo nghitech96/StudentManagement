@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Changa+One&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome-->
+  <script src="https://kit.fontawesome.com/1a97744841.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+  <div class="container">
+    <div class="header-main">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="header-img">
+                    <img src="../static/images/user.png" class="img-fluid" alt="">
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="header-title">
+                    USER LOGIN
+                </div>
+                <form action="#" method="post">
+                  <div class="form-group">
+                      <input th:field="*{name}" class="form-control" value="User name" name="name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'User name';}"/>
+                  </div>
+                  <div class="form-group">
+                      <input th:field="*{password}" class="form-control" value="Password" name="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'password';}"/>
+                  </div>
+                  <input th:field="*{confirmPass}" class="text w3lpass" type="password" name="password" placeholder="Confirm Password" required="">
+                  <div th:if="${param.checkpass}">
+                  <div class="alert alert-info"> You password and confirm password not same!</div>
+                    </div>
+                  <div class="form-group">
+                    <input th:field="*{email}" class="form-control" value="email" name="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'password';}"/>
+                </div>
+                <div th:if="${param.emailexist}">
+                  <div class="alert alert-info"> You email have exist please register other email</div>
+                </div>
+                  <div class="form-group form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="rememberPassword" />
+                      <label class="form-check-label" for="rememberPassword"> Remember password? </label>
+                  </div>
+                  <div>
+                    <label>Forgot password? <a href="../templates/changepassword.html">Change password?</a></label>
+                  </div>
+                  <label>Don't have an account? <a href="../templates/register.html">Sign Up</a></label> 
+                  <div class="button">
+                    <button type="submit" class="btn btn-primary" onclick="navigatetoweb">Login</button>
+                  </div>
+                  
+                  <script>
+                    function navigatetoweb(){
+                      window.location.href = "/user.html";
+                    }
+                  </script>
+              </form>
+
+          
+            </div>
+        </div>
+
+        
+    </div>
+
+  
+      <p class="footer">© User Management Form. All rights reserved | Design by Nghi Dang</p>
+ 
+   
+</div>
+
+     <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+  integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+  integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+</script>
+
+
+</body>
+</html>

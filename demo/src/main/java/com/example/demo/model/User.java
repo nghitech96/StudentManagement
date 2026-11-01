@@ -18,7 +18,7 @@ import lombok.NoArgsConstructor;
 public class User {
     @Id
     @Column(name = "id", nullable = false, unique = true)
-    private String id; // uuid
+    private String id = UUID.randomUUID().toString();
     @Column(name = "username", nullable = false, unique = true)
     private String username;
     @Column(name = "password", nullable = false, unique = true)

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
   integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
@@ -24,7 +24,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="header-img">
-                    <img src="../static/images/enrollment.png" class="img-fluid" alt="Enrollment Image">
+                    <img src="/images/enrollment.png" class="img-fluid" alt="Enrollment Image">
                 </div>
             </div>
             <div class="col-md-8">
@@ -34,17 +34,12 @@
                 <form th:action="@{/auth/register}" method="post" th:object="${userdto}">
                     <div class="form-group">
                         <label for="username">Username</label>
-                        <input th:field="*{name}" class="form-control" id="username" name="name" placeholder="Please enter username" required />
+                        <input th:field="*{username}" class="form-control" id="username" placeholder="Please enter username" required />
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
                         <input th:field="*{password}" class="form-control" id="password" type="password" name="password" placeholder="Please enter password" required />
                     </div>
-                    <div class="form-group">
-                        <label for="confirmPassword">Confirm Password</label>
-                        <input th:field="*{confirmPass}" class="form-control" id="confirmPassword" type="password" name="confirmpass" placeholder="Please confirm password" required />
-                    </div>
-                    
                     <div class="form-group">
                         <label for="email">Email</label>
                         <input th:field="*{email}" class="form-control" id="email" name="email" placeholder="Please enter email" required />
@@ -56,7 +51,7 @@
                     <div th:if="${param.success}">
                         <div class="alert alert-success">You have successfully registered!</div>
                     </div>
-                    <label>Already have an account? <a href="../templates/login.html">Login</a></label> 
+                    <label>Already have an account? <a href="/auth/test">Login</a></label>
                     <div class="button">
                         <button type="submit" class="btn btn-primary">SIGN UP</button>
                     </div>

@@ -1,0 +1,11 @@
+.env
+.env.*
+!.env.example
+**/target/
+**/node_modules/
+**/dist/
+**/playwright-report/
+**/test-results/
+**/.tsupgrader/
+.project
+.vscode/

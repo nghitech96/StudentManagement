@@ -18,6 +18,7 @@ concurrency:
 
 jobs:
   build:
+    if: ${{ vars.API_BASE_URL != '' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository

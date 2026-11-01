@@ -13,3 +13,9 @@ services:
         value: https://nghitech96.github.io
       - key: DRAFT_RATE_LIMIT_PER_MINUTE
         value: "30"
+      - key: DB_URL
+        sync: false
+      - key: DB_USERNAME
+        sync: false
+      - key: DB_PASSWORD
+        sync: false

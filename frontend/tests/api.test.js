@@ -22,7 +22,7 @@ test("login sends the email and password as JSON", async (t) => {
 
   assert.equal(requestUrl, "/api/auth/login");
   assert.equal(requestOptions.method, "POST");
-  assert.equal(requestOptions.credentials, "same-origin");
+  assert.equal(requestOptions.credentials, "include");
   assert.deepEqual(JSON.parse(requestOptions.body), {
     username: "student@example.test",
     password: "pass1234",

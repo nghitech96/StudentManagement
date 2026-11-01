@@ -7,7 +7,7 @@ function resolveUrl(path) {
 
 async function requestWithMetadata(path, options = {}) {
   const response = await fetch(resolveUrl(path), {
-    credentials: "same-origin",
+    credentials: "include",
     ...options,
     headers: {
       ...(options.body ? { "Content-Type": "application/json" } : {}),
